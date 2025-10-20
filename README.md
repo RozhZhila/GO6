@@ -82,10 +82,4 @@ We propose the *Agile SDLC model* for this project:
   5. *Deployment:* Deploy updates iteratively to hosting servers.  
   6. *Feedback & Improvement:* Gather user feedback and refine features continuously.  
 
-This approach ensures the platform evolves *according to student needs* while maintaining *high quality and security*.  
-
----
-
-## Repository Link
-
-[Insert your GitHub repository link here]
+This approach ensures the platform evolves *according to student needs* while maintaining *high quality and security*.
