@@ -1,6 +1,6 @@
 ## Structured Specifications (Role 4)
 
-Below are the three key functional requirements specified using the structured template (as in the insulin pump example).
+Three key functional requirements:
 
 ---
 
