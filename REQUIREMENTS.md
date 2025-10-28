@@ -4,132 +4,132 @@ Three key functional requirements:
 
 ---
 
-### **FR-01 — User Registration and Verification**
+### **FR-01 — Student Registration and Verification**
 
 **Description:**  
-The system shall allow new users (students or companies) to register an account, verify their email, and access their profile dashboard.
+The system should allow new users (students) to register an account and verify their student status before accessing the platform.
 
-**Rationale:**  
-Registration enables unique, secure access to personalized features and stored data.
+**Purpose:**  
+To ensure that only genuine, active students can join the platform, keeping it safe and trustworthy.
 
 **Inputs:**  
-User type (student/company), name, email, password, optional organization name.
+Full name, university email, password, optional student ID or proof of enrollment.
 
 **Outputs:**  
-Confirmation email; new verified account record in the database.
+Verification email or code; new verified student account stored in the database.
 
 **Preconditions:**  
-- User has an unused email address.  
+- User has an active student email or valid proof of enrollment.  
 - Internet connection is available.
 
 **Trigger:**  
-User clicks "Sign Up" and submits the registration form.
+Student clicks **“Sign Up”** and submits registration form.
 
 **Normal Flow:**  
-1. User selects role (student or company).  
-2. Fills registration form and submits.  
-3. System validates data (email format, password strength).  
-4. System stores user info with “unverified” status.  
-5. System sends verification email.  
-6. User clicks verification link.  
-7. System marks user as verified and redirects to dashboard.
+1. Student enters registration details.  
+2. System validates all fields.  
+3. System sends a verification email or code to the provided address.  
+4. Student clicks the link or enters the code to confirm their identity.  
+5. System activates the account and redirects to the student dashboard.
 
 **Alternative Flow:**  
-- Email invalid → show error and reject submission.  
-- Verification link expired → prompt resend.  
+- Invalid email or missing information → show error.  
+- Verification code expired → allow resending a new one.
 
 **Postconditions:**  
-User has a verified account and can access profile functions.
+Verified student account is active, granting access to collaboration features.
 
 **Exceptions:**  
-Email delivery failure → display resend option.  
+Email delivery fails → show “resend verification” option.
 
 **Related Non-Functional Requirements:**  
-Security (password hashing), availability (system responds within 3 seconds).
+Security (student data encryption), availability (response within 3 seconds).
 
 ---
 
-### **FR-02 — Job/Task Posting by Companies**
+### **FR-02 — Opportunity and Project Posting (Students and Companies)**
 
 **Description:**  
-The system shall allow verified companies to create and publish job or task listings that students can view and apply for.
+The system shall allow verified students, companies, and organizations to create and publish posts such as projects, collaboration ideas, volunteering opportunities, or short-term tasks.
 
-**Rationale:**  
-Posting jobs connects employers to students and forms the core platform purpose.
+**Purpose:**  
+To provide a shared space where students can find real opportunities and where companies can post relevant projects while maintaining the student-focused environment.
 
 **Inputs:**  
-Job title, description, required skills, location, duration, deadline.
+Post title, description, category (project / job / volunteering / freelancing), required skills, duration, deadline, and optional attachments or links.
 
 **Outputs:**  
-A visible job listing stored in the database.
+A visible post stored in the database and displayed in the opportunity feed.
 
 **Preconditions:**  
-Company account must be verified and logged in.
+- User account (student, company, or organization) is verified and logged in.  
+- For companies/organizations, access is limited to their designated posting section.
 
 **Trigger:**  
-Company user selects “Create Job Post” and submits the form.
+User clicks **“Create Post / Opportunity”** and submits the form.
 
 **Normal Flow:**  
-1. Company opens job creation page.  
-2. Enters job details.  
-3. System validates all mandatory fields.  
-4. System saves job post with status “Published.”  
-5. Post appears immediately in student listings.
+1. User (student or company) opens the posting form.  
+2. Fills in all required fields and uploads optional attachments.  
+3. System validates all inputs.  
+4. System saves the post with status **“Published.”**  
+5. The post becomes visible in the opportunities feed (students see all posts; companies see limited interaction options).  
+6. Students can view, apply for, or request to join posted opportunities.
 
 **Alternative Flow:**  
-- Missing required info → system shows error.  
-- Save as draft → post not yet visible.
+- Missing required fields → show validation errors.  
+- User saves as draft → post not visible until published.  
+- Company post flagged for review → hidden until approved by admin.
 
 **Postconditions:**  
-New job listing exists in the system, visible to eligible users.
+A new opportunity or project post is saved and visible to authorized users according to their role.
 
 **Exceptions:**  
-Database error → display “Unable to save post, please retry.”
+Database or upload failure → system displays “Unable to save post, please retry.”
 
 **Related Non-Functional Requirements:**  
-Usability (simple form layout), reliability (data saved correctly).
+Usability (clear, role-based posting interface), security (restricted company permissions), reliability (data saved accurately).
+--
 
----
-
-### **FR-03 — Application and Messaging**
+### **FR-03 — Collaboration Requests and Messaging**
 
 **Description:**  
-The system shall allow students to apply for a job and send messages to the employer related to that application.
+The system shall allow students to send collaboration requests and communicate through an in-app messaging feature.
 
-**Rationale:**  
-Direct communication between students and employers simplifies hiring and improves response time.
+**Purpose:**  
+To enable direct communication and teamwork among students who wish to collaborate on projects or ideas.
 
 **Inputs:**  
-Job ID, cover letter, optional attachments (CV, portfolio).
+Project ID, message content, optional file attachments or links.
 
 **Outputs:**  
-Application record, confirmation message, and message thread between student and employer.
+Collaboration request record, notification to project owner, and message thread between participants.
 
 **Preconditions:**  
-Student account verified; job post active.
+- Both users (sender and receiver) are verified students.  
+- The project post is active.
 
 **Trigger:**  
-Student clicks “Apply” and submits an application.
+Student clicks **“Request to Join”** or **“Message”** on a project post.
 
 **Normal Flow:**  
-1. Student opens job listing.  
-2. Clicks “Apply,” fills form, uploads file (optional).  
-3. System validates inputs.  
-4. System saves application data.  
-5. Company receives notification.  
-6. Student and company can exchange messages through an in-app chat.
+1. Student selects a project and sends a request or message.  
+2. System validates inputs and stores the request.  
+3. The project owner receives a notification.  
+4. If accepted, both users gain access to the shared message thread.  
+5. They can continue chatting and sharing files in-app.
 
 **Alternative Flow:**  
-- Invalid file upload → show error.  
-- Job expired → prevent application.
+- Invalid attachment → show error message.  
+- Request rejected → sender receives rejection notice.  
 
 **Postconditions:**  
-Application stored, visible to both student and company.
+Collaboration request and chat history are saved and accessible to both users.
 
 **Exceptions:**  
-Server downtime → temporary “Try again later” message.
+Server downtime → “Message failed, please try again later.”
 
 **Related Non-Functional Requirements:**  
-Security (file type validation), performance (messaging delay < 2 seconds).
+Privacy (messages visible only to participants), performance (message delivery under 2 seconds).
 
 ---
