@@ -63,5 +63,4 @@
 - **Technical Requirements:** Enterprise-grade security and university integration needed
 - **Business Value:** Levels playing field for smaller companies in recruitment
 
----
-*Document generated for Requirements Engineering Assignment - Team [YourTeamID]*
+
