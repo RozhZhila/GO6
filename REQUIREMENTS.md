@@ -127,7 +127,7 @@ The session lasted **9 minutes** and included a brief company overview and **15 
 | NF-18 | Data retention & deletion policy (users can request data deletion) | Non-Functional | System Requirement | High | Comply with privacy regulations and university rules |
 
 ---
-## Structured Specifications (Role 4)
+## Role 4: Structured Specifications Developer
 
 Three critical functional requirements:
 
