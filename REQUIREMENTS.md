@@ -1,8 +1,8 @@
-# Role 1: Elicitation Techniques
+# Role 1 : Elicitation Techniques
 
 ---
 
-## **1️⃣ First Elicitation Technique — Online Survey**
+## **1️ First Elicitation Technique — Online Survey**
 
 ###  Objective
 To gather opinions and suggestions from key stakeholders — **students** and **company representatives** — relevant to our project.
@@ -288,5 +288,3 @@ All three functional requirements are classified as **Mandatory (M)** because ea
 
 ---
 
-**Prepared by: Rozh Zhila**
- Role 5: Requirements Prioritization section
