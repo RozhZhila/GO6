@@ -1,3 +1,88 @@
+Elicitation Techniques
+First Elicitation Technique — Online Survey
+Objective
+
+To gather opinions and suggestions from key stakeholders — students and company representatives — relevant to our project.
+
+Method
+
+A Google Form survey was distributed via university group chats and other social media platforms between 27–30 October.
+The survey included 15 questions across sections such as background information, current challenges, feature preferences, and trust & safety.
+
+Responses received:
+
+29 total participants:
+
+25 students
+
+3 company representatives
+
+1 university staff member
+
+Survey Link: (Untitled Form - Google Forms)
+
+Key Findings
+
+90% of participants already use online job or project platforms.
+
+LinkedIn was the most used platform (~69%), followed by social media groups — indicating a need for a platform that combines job finding and communication.
+
+Common challenges mentioned:
+
+Difficulty finding suitable jobs
+
+Unclear or unfriendly interfaces
+
+Poor notification management
+
+Most desired feature: Job and internship listings (~79.3%).
+
+Safety concerns were frequently mentioned, especially in question 14.
+
+Extracted Requirements
+ID	Requirement Description
+R1	The system shall allow users to register with their university or company IDs.
+R2	The system shall provide communication tools for students to collaborate on projects.
+R3	The system shall continuously update and add new job opportunities.
+R4	The system shall allow students to showcase their skills and ideas.
+R5	The system shall have a user-friendly and intuitive design.
+R6	The system shall ensure strong privacy and safety measures.
+Second Elicitation Technique — Stakeholder Interview
+Objective
+
+To understand companies’ perspectives on online job platforms and identify improvements benefiting both students and employers.
+
+Method
+
+An online interview was conducted with Kanar Abdullah, a representative from IDYL Protection Company (UK), which focuses on financial income protection.
+The session lasted 9 minutes and included a brief company overview and 15 structured questions.
+
+Key Findings
+
+The company occasionally uses LinkedIn, but finds social platforms more effective for recruitment due to visibility issues for smaller companies.
+
+Primarily recruits students for marketing, customer service, and data-related internships.
+
+Recruitment sources: LinkedIn, social media, and university career offices.
+
+Main challenge: Verifying applicants’ authenticity — fake or incomplete profiles are common.
+
+Would like access to student portfolios showing skills, projects, and certifications.
+
+Data privacy is a major concern — any new platform must comply with protection standards.
+
+Direct communication tools (messaging/chat) are valuable for contacting and shortlisting students.
+
+Extracted Requirements
+ID	Requirement Description
+R7	The system shall verify that applicants are enrolled students through university email verification.
+R8	The system shall provide an easy-to-use interface for companies to post and manage listings.
+R9	The system shall allow companies to view student portfolios (skills, projects, certifications).
+R10	The system shall enable secure communication between companies and students via private messaging.
+R11	The system shall comply with data protection and privacy standards for financial organizations.
+R12	The system shall include verification badges for both students and organizations to enhance trust.
+
+---
 
 *Role 2:* Requirements Classification Specialist  
 ---
