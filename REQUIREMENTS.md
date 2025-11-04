@@ -1,3 +1,49 @@
+
+*Role:* Requirements Classification Specialist  
+---
+
+| ID | Description | Category | Type | Priority | Notes |
+|----|-------------|----------|------|----------|-------|
+| F-01 | Student signup and account creation using university email | Functional | User Requirement | High | Must support common edu emails and invite flow |
+| F-02 | Student verification workflow (email confirmation and optional student ID upload) | Functional | System Requirement | High | Verification status affects access level |
+| F-03 | Role-based access control: Student, Organization, Admin | Functional | System Requirement | High | Controls permissions and UI access |
+| F-04 | Student profile (name, university, major, skills, bio, projects) | Functional | User Requirement | High | Editable by student; viewable by other verified users |
+| F-05 | Organization profile with limited information and restricted actions | Functional | User Requirement | High | Org accounts can post opportunities but cannot access student-only areas |
+| F-06 | Idea / Project posting (students can create posts describing idea, tags, required skills) | Functional | User Requirement | High | Posts have status (open, closed, in progress) |
+| F-07 | Browse and search functionality across categories, skills, and tags | Functional | User Requirement | High | Filtering and sorting options required |
+| F-08 | Apply / Join workflow for students to express interest in a project or opportunity | Functional | User Requirement | High | Includes message to project owner and simple proposal form |
+| F-09 | Organization posting: internships, one-time jobs, volunteering opportunities (limited to opportunity sections) | Functional | User Requirement | High | Org posts must be flagged as 'organization opportunity' |
+| F-10 | Project collaboration tools: basic task list / team assignment (MVP) | Functional | User Requirement | Medium | Integrate lightweight project management features |
+| F-11 | Private and group messaging between verified users | Functional | User Requirement | High | Must be accessible only to verified accounts |
+| F-12 | Notification system (in-app + optional email notifications) | Functional | User Requirement | High | Users can opt in/out of email notifications |
+| F-13 | Reporting and moderation tools (report post/user, admin review queue) | Functional | System Requirement | High | Admin dashboard for moderation actions |
+| F-14 | Categories & channels for thematic grouping (e.g., tech, design, social) | Functional | User Requirement | Medium | Students can follow categories |
+| F-15 | Profile portfolio: ability to attach project artifacts and links | Functional | User Requirement | Medium | Limit file types/size for attachments |
+| F-16 | Application settings & privacy controls (profile visibility, contact preferences) | Functional | User Requirement | Medium | Default privacy set to student-only visibility where appropriate |
+| F-17 | Audit logging for security-sensitive actions (login, verification, admin actions) | Functional | System Requirement | High | Logs retained per data retention policy |
+| F-18 | Admin user management (suspend, delete, change roles) | Functional | System Requirement | High | Admin actions must be audited |
+| F-19 | Onboarding tutorial / help pages for new users | Functional | User Requirement | Low | Short guided tour for first login |
+| F-20 | Export / download basic profile or project summary (for CVs) | Functional | User Requirement | Low | CSV or PDF export option (later phase) |
+| NF-01 | Authentication security: hashed passwords (bcrypt) and secure session management | Non-Functional | System Requirement | High | Conform to OWASP recommendations |
+| NF-02 | Transport security: HTTPS everywhere (TLS) for all requests | Non-Functional | System Requirement | High | Enforce HSTS and secure cookies |
+| NF-03 | Data encryption at rest for sensitive fields (verification documents, personal info) | Non-Functional | System Requirement | High | Use AES-256 or equivalent |
+| NF-04 | Performance: Page load time < 2s for common pages under expected load | Non-Functional | System Requirement | Medium | Define metrics and testing thresholds |
+| NF-05 | Scalability: Support growth from pilot (hundreds) to thousands of users | Non-Functional | System Requirement | Medium | Design DB indexing and horizontal scaling plan |
+| NF-06 | Availability: 99.5% uptime target for production | Non-Functional | System Requirement | Medium | Include monitoring and failover strategy |
+| NF-07 | Backup & Recovery: Daily backups and tested restore process | Non-Functional | System Requirement | High | Backup retention policy documented |
+| NF-08 | Privacy & Compliance: Compliance with local data protection laws and university policies | Non-Functional | System Requirement | High | Include data deletion and user consent flows |
+| NF-09 | Usability: Intuitive UI supporting common student workflows | Non-Functional | User Requirement | High | Usability testing with students during sprints |
+| NF-10 | Accessibility: Meet WCAG 2.1 AA where feasible | Non-Functional | System Requirement | Medium | Keyboard nav, alt-text, color contrast |
+| NF-11 | Maintainability: Clean codebase, modular architecture, and documented APIs | Non-Functional | System Requirement | Medium | Use version control, code reviews, CI pipelines |
+| NF-12 | Real-time updates: Real-time notifications and chat (WebSocket or polling) | Non-Functional | System Requirement | Medium | Choose an approach appropriate for MVP |
+| NF-13 | Rate limiting & abuse prevention to protect from spam and bots | Non-Functional | System Requirement | High | Apply throttling per IP/account |
+| NF-14 | Testing: Automated unit tests & integration tests for core features | Non-Functional | System Requirement | High | Test coverage targets defined by team |
+| NF-15 | Logging & Monitoring: Centralized logs, alerts for errors and suspicious activity | Non-Functional | System Requirement | High | Integrate with monitoring services |
+| NF-16 | Internationalization / Localization support (future) | Non-Functional | System Requirement | Low | Design text resources for translation |
+| NF-17 | Mobile responsiveness and support for major modern browsers | Non-Functional | User Requirement | High | Responsive CSS and mobile-first design |
+| NF-18 | Data retention & deletion policy (users can request data deletion) | Non-Functional | System Requirement | High | Comply with privacy regulations and university rules |
+
+---
 ## Structured Specifications (Role 4)
 
 Three critical functional requirements:
