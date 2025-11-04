@@ -125,3 +125,39 @@ Collaboration request and chat records are stored and visible to both users.
 
 **Side effects:**  
 Email or in-app notifications are sent when new messages arrive.
+
+
+
+
+
+
+
+
+# Role 5: Requirements Prioritization
+
+## Functional Requirements Prioritization
+
+Below is the prioritization of the identified Functional Requirements for the system. Each requirement has been classified as **Mandatory (M)**, **Nice-to-Have (N)**, or **Superfluous (S)**, based on importance for achieving the main goals of the project, feasibility within the initial development timeline, and direct system necessity.
+
+| Requirement ID | Requirement Description                         | Priority |
+|----------------|-------------------------------------------------|----------|
+| FR-01          | User Registration and Verification (Students + Companies) | M        |
+| FR-02          | Opportunity and Project Posting for verified users | M        |
+| FR-03          | Collaboration Requests and Messaging between users | M        |
+
+### Justification for Prioritization
+
+- **FR-01** is **Mandatory (M)** because the system cannot function without verified authentic users. This directly supports trust, user legitimacy, and security. Without this requirement, all other system features collapse since no user identity is validated.  
+
+- **FR-02** is **Mandatory (M)** because the core purpose of the platform is to allow students and companies to publish opportunities and projects. This requirement is the central value proposition of the platform and enables the main functionality.  
+
+- **FR-03** is **Mandatory (M)** because collaboration and communication between students and companies is the primary utility of the system after opportunities are posted. Without messaging and collaboration requests, the system becomes a static listing platform and loses its interaction component.  
+
+### Summary
+
+All three functional requirements are classified as **Mandatory (M)** because each one is essential for the system to achieve its main goal — connecting students with organizations through verified collaboration opportunities. Removing any of these requirements would break the core workflow of the platform and therefore none of them can be considered Nice-to-Have (N) or Superfluous (S) in the context of this project scope.
+
+---
+
+**Prepared by: Rozh Zhila**
+ Role 5: Requirements Prioritization section
